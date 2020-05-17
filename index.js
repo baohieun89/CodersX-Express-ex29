@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_LOCAL_URL);
 var bodyParser = require('body-parser');
 var shortid = require('shortid');
 var cookieParser = require('cookie-parser')
-const port = 3000;
+const port = process.env.PORT || 3000;
 var session = require('express-session')
 var MongoStore = require('connect-mongo')(session);
 
